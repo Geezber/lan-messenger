@@ -1,0 +1,18 @@
+# Location: Root of your server branch
+# Purpose: Infrastructure-as-code configuration
+
+services:
+  - type: web
+    name: lan-messenger-relay
+    env: python
+    region: frankfurt  # Options: tokyo, singapore, frankfurt, ohio, oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.9.16
+    healthCheckPath: /ping
+    autoDeploy: true
