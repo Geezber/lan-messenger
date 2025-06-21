@@ -1,0 +1,36 @@
+# Server Branch .gitignore
+
+### Python ###
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+### Virtual Environments ###
+venv/
+env/
+.venv/
+ENV/
+
+### Runtime Files ###
+*.log
+*.pid
+*.db
+*.cache
+
+### OS Metadata ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Render Specific ###
+.render/
+render-*
+
+### Sensitive Data ###
+*.env
+*.key
+*.pem
+*.secret
+secrets.txt
+config.ini
